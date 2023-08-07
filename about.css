@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+    color:#000000;
+    position: fixed;
+    margin-top: -0.5vw;
+    font-size: 2vw;
+    width: 100%;
+    padding: 60px;
+    background-color: #e4e4e4;
+    font-family: 'Work Sans', sans-serif;
+}
+.abtme {
+    padding-top: 8vw;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: 1.3vw;
+}
+.imga {
+    width: 15%;
+}
+.mybkg {
+    padding-top: 1vw;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: 1.25vw;
+}
+.info {
+    padding-top: 1vw;
+    font-size: 1vw;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
