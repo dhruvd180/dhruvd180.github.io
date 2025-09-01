@@ -1,25 +1,294 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="about.css" /> 
-    <script src="JS.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>About Student Academy</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | BigCatID</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body id="Header">
-    <div class="header" id="myHeader">
-        <h1>Student Academy</h1>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        BigCatID
+      </div>
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="our-work.html" class="nav-link">Our Work</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div  class="abtme">
-        <h2>
-            About Me
-        </h2>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero hero-small">
+    <div class="hero-background">
+      <div class="hero-pattern"></div>
     </div>
-    <div style="text-align: center;"><img src="https://img1.wsimg.com/isteam/ip/c33a54b5-d06e-41d1-aa6a-37181d0c499f/aa.jpg/:/cr=t:8.26%25,l:0%25,w:100%25,h:75%25/rs=w:1240,h:1240,cg:true" class="imga"></div>
-    <h3 class="mybkg">My Background</h3>
-    <p class="info">I'm a rising 8th grader in Seattle, WA who loves math and learning. I do robotics and compete in the VEX IQ robotics competition. I enjoy playing sports like tennis and basketball, hiking, biking, skiing and reading books. I love to travel and see and learn about new places and cultures and also love to cook foods from all over the world.</p>
+    <div class="hero-container">
+      <div class="hero-content fade-up">
+        <div class="hero-badge">
+          <span class="badge-icon"></span>
+          Our Mission
+        </div>
+        <h1 class="hero-title">About BigCatID</h1>
+        <p class="hero-subtitle">
+          I am a student who is passionate about conservation and using AI for good.
+        </p>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-text">Discover The Story</div>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="story-container">
+      <div class="story-content-grid">
+        <div class="story-text fade-left">
+          <div class="section-badge">Our Story</div>
+          <h2 class="section-title">Born from Necessity</h2>
+          <p class="story-description">
+            BigCatID was founded when I visited the Wild Source's Njozi Camp in the Northern Serengeti, where biologists were spend huge amounts of time manually ID'ing cheetahs, leopards, and lions.
+          <p class="story-description">
+            I came up with a simple goal: utilize AI image recognition technology to identify big cats based on their spot, rosette, or under-eye patterns.
+          </p>
+          <div class="story-stats">
+            <div class="story-stat">
+              <div class="stat-icon"></div>
+              <div class="stat-content">
+                <span class="stat-number">2025</span>
+                <span class="stat-label">Founded</span>
+              </div>
+            </div>
+            <div class="story-stat">
+              <div class="stat-icon"></div>
+              <div class="stat-content">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Species</span>
+              </div>
+            </div>
+            <div class="story-stat">
+              <div class="stat-icon"></div>
+              <div class="stat-content">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Partner Organization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="story-visual fade-right">
+          <div class="story-image">
+            <div class="image-placeholder">
+              <div class="placeholder-content">
+                <span class="placeholder-icon"><img class="newimg" src="images/cheetah-hero.jpg"></span>
+                <h4>Conservation Technology Research</h4>
+                <p>AI-powered wildlife identification in the field</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section 
+  <section class="values-section">
+    <div class="values-container">
+      <div class="section-header fade-up">
+        <div class="section-badge">Our Values</div>
+        <h2 class="section-title">What Drives Us</h2>
+        <p class="section-subtitle">
+          The principles that guide everything we do in conservation technology.
+        </p>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-card fade-up" data-delay="0">
+          <div class="value-icon">
+            <span class="icon-emoji">🔬</span>
+          </div>
+          <h3 class="value-title">Open Science</h3>
+          <p class="value-description">We believe in transparent research that benefits the entire conservation community. Our findings and methodologies are shared openly.</p>
+          <div class="value-highlight">Transparent Research</div>
+        </div>
+        
+        <div class="value-card fade-up" data-delay="100">
+          <div class="value-icon">
+            <span class="icon-emoji">🤝</span>
+          </div>
+          <h3 class="value-title">Collaboration First</h3>
+          <p class="value-description">Conservation requires teamwork. We partner with field researchers, local communities, and conservation organizations worldwide.</p>
+          <div class="value-highlight">Global Partnership</div>
+        </div>
+        
+        <div class="value-card fade-up" data-delay="200">
+          <div class="value-icon">
+            <span class="icon-emoji">🎯</span>
+          </div>
+          <h3 class="value-title">Impact Focus</h3>
+          <p class="value-description">Every feature and algorithm we develop is measured against real conservation outcomes and species protection.</p>
+          <div class="value-highlight">Results Driven</div>
+        </div>
+        
+        <div class="value-card fade-up" data-delay="300">
+          <div class="value-icon">
+            <span class="icon-emoji">🌱</span>
+          </div>
+          <h3 class="value-title">Ethical Technology</h3>
+          <p class="value-description">We develop AI that serves wildlife and conservation, prioritizing privacy, accuracy, and responsible use.</p>
+          <div class="value-highlight">Responsible AI</div>
+        </div>
+        
+        <div class="value-card fade-up" data-delay="400">
+          <div class="value-icon">
+            <span class="icon-emoji">🌍</span>
+          </div>
+          <h3 class="value-title">Global Accessibility</h3>
+          <p class="value-description">Conservation technology should be available to researchers worldwide, regardless of resources or location.</p>
+          <div class="value-highlight">Universal Access</div>
+        </div>
+        
+        <div class="value-card fade-up" data-delay="500">
+          <div class="value-icon">
+            <span class="icon-emoji">📈</span>
+          </div>
+          <h3 class="value-title">Continuous Innovation</h3>
+          <p class="value-description">We constantly improve our technology, staying at the forefront of AI and conservation science.</p>
+          <div class="value-highlight">Always Evolving</div>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="team-container">
+      <div class="section-header fade-up">
+        <div class="section-badge">Engineer and Conservationist</div>
+        <h2 class="section-title">Meet The Founder</h2>
+      </div>
+      
+
+        
+        <div class="team-card fade-up" data-delay="100">
+          <div class="team-avatar"></div>
+          <h3 class="team-name">Dhruv Dsouza</h3>
+          <div class="team-role">Student, AI Engineer & Founder</div>
+          <p class="team-bio">High school student at Eastlake High School with a passion for using AI to help people and animals.</p>
+          <div class="team-expertise">
+            <span class="expertise-tag">Machine Learning</span>
+            <span class="expertise-tag">Computer Vision</span>
+            <span class="expertise-tag">Neural Networks</span>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Recognition Section -->
+  <section class="recognition-section">
+    <div class="recognition-container">
+      <div class="section-header fade-up">
+        <div class="section-badge">Recognition</div>
+        <h2 class="section-title">Partnerships</h2>
+        <p class="section-subtitle">
+          We have partnered with the Wild Source and the Big Cat Project to utilize our technology.
+        </p>
+      </div>
+      
+      <div class="recognition-grid">
+
+        <div class="recognition-item fade-up" data-delay="300">
+          <div class="recognition-icon"></div>
+          <h3 class="recognition-title">Wild Source Partnership</h3>
+          <p class="recognition-org">Identifying big cats in Serengeti National Park, Tanzania.</p>
+          <div class="recognition-year">2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-content fade-up">
+        <h2 class="cta-title">Learn More</h2>
+        <p class="cta-subtitle">
+          Learn more about our Wild Source partnership and how BigCatID works.
+        </p>
+        <div class="cta-buttons">
+          <a href="our-work.html" class="btn btn-primary btn-large">
+            <span>See Our Work</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="index.html" class="btn btn-secondary btn-large">
+            <span>Return Home</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon"></span>
+            BigCatID
+          </div>
+          <p class="footer-description">
+            Revolutionizing wildlife identification through AI-powered individual identification technology.
+          </p>
+          <div class="footer-stats">
+            <span>10+ Cats Identified</span>
+            <span>90%+ Accuracy</span>
+            <span>1 Partner Organization</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="our-work.html">Our Work</a>
+            <a href="about.html">About</a>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <a href="mailto:dhruvcds@outlook.com">dhruvcds@outlook.com</a>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 BigCatID | Built for Conservation Impact</p>
+        <div class="footer-badges">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html>

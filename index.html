@@ -1,52 +1,283 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="css.css" /> 
-    <script src="JS.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
-    <title>Student Academy</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WildlifeID - AI-Powered Wildlife Identification</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body id="Header">
-    <div class="header" id="myHeader">
-        <h1>Student Academy</h1>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        WildlifeID
+      </div>
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="our-work.html" class="nav-link">Our Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+
+        </ul>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-        <img src="aaz.png" alt="BKG" id="IMG">
+  </header>
 
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-background">
+      <img src="images/hero-bg.jpg">
+    </div>
+    <div class="hero-container">
+      <div class="hero-content fade-up">
+        <!--
+        <div class="hero-badge">
+          <span class="badge-icon"></span>
+        </div>-->
+        <div class="hero-badge"><h1 class="hero-title">Revolutionizing Wildlife Identification</h1></div>
         
-        <p align=justify id="Textbox"><b>
-          "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success." 
+        <div class="hero-badge">
 
-          -James Cameron</b>
+          Identify individual big cats using advanced AI pattern recognition. 
+          Transform research with 90%+ accuracy and real-time processing.
+        
+        </div>
+        <div class="hero-buttons">
+          <a href="our-work.html" class="btn btn-primary">
+            <span>Explore Our Work</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            <span>See How It Works</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual fade-up">
+        <div class="hero-card">
+          <div class="hero-card-icon"><img class="newimg" src="images/mp.png"></div>
+          <h3>Individual Recognition AI</h3>
+          <p>Advanced machine learning algorithms identify unique spot patterns and facial features with high accuracy.</p>
+          <div class="hero-card-stats">
+            <div class="stat">
+              <span class="stat-number">90%+</span>
+              <span class="stat-label">Accuracy</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Cats ID'd</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="scroll-text">Scroll to explore</div>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up" data-delay="0">
+          <div class="stat-icon"></div>
+          <span class="stat-number" data-count="10">0</span>
+          <span class="stat-label">Big Cats Identified</span>
+        </div>
+        <div class="stat-item fade-up" data-delay="100">
+          <div class="stat-icon"></div>
+          <span class="stat-number" data-count="92">0</span>
+          <span class="stat-label">% Accuracy Rate</span>
+        </div>
+        <div class="stat-item fade-up" data-delay="200">
+          <div class="stat-icon"></div>
+          <span class="stat-number" data-count="50">0</span>
+          <span class="stat-label">Images Processed</span>
+        </div>
+        <div class="stat-item fade-up" data-delay="300">
+          <div class="stat-icon"></div>
+          <span class="stat-number" data-count="80">0</span>
+          <span class="stat-label">% Time Saved</span>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="Video" class="video-section">
+  <video autoplay loop muted playsinline>
+    <source src="images/sequence 01.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="features-container">
+      <div class="section-header fade-up">
+        <div class="section-badge">Why Choose WildlifeID</div>
+        <h2 class="section-title">Advanced Technology for Conservation</h2>
+        <p class="section-subtitle">
+          Our cutting-edge AI platform transforms wildlife research with unmatched precision and efficiency.
         </p>
-        <div class="text-center">
-            <a href="about.html" class="button">About Me</a>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card fade-up" data-delay="0">
+          <div class="feature-icon">
+            <span class="icon-emoji"></span>
+          </div>
+          <h3 class="feature-title">Ultra-High Accuracy</h3>
+          <p class="feature-description">
+            Our deep learning algorithms achieve 90%+ identification accuracy by analyzing unique spot patterns, facial features, and distinctive markings.
+          </p>
+          <div class="feature-highlight">90%+ Success Rate</div>
         </div>
-        <h3 class="Discover">Discover Student Academy</h3>
-        <div class="align">
-        <div class="row">
-            <div class="column">
-              <img src="https://img1.wsimg.com/isteam/ip/c33a54b5-d06e-41d1-aa6a-37181d0c499f/s.jpg/:/cr=t:0%25,l:0.12%25,w:99.75%25,h:100%25/rs=w:365,h:274,cg:true" alt="1" style="width:100%">
-            </div>
-            <div class="column">
-              <img src="https://img1.wsimg.com/isteam/stock/373/:/cr=t:0%25,l:5.67%25,w:88.67%25,h:100%25/rs=w:365,h:274,cg:true" alt="2" style="width:100%">
-            </div>
-            <div class="column">
-              <img src="https://img1.wsimg.com/isteam/stock/18582/:/cr=t:0%25,l:5.67%25,w:88.67%25,h:100%25/rs=w:365,h:274,cg:true" alt="3" style="width:100%">
-            </div>
+        
+        <div class="feature-card fade-up" data-delay="100">
+          <div class="feature-icon">
+            <span class="icon-emoji"></span>
+          </div>
+          <h3 class="feature-title">Fast Processing</h3>
+          <p class="feature-description">
+            Process thousands of images in minutes, not months. Real-time analysis transforms your research.
+          </p>
+          <div class="feature-highlight">Minutes vs Months</div>
         </div>
-        <div class="row">
-            <div class="column">
-              a
-            <div class="column">
-              a
-            </div>
-            <div class="column">
-              a
-            </div>
+        
+        <div class="feature-card fade-up" data-delay="200">
+          <div class="feature-icon">
+            <span class="icon-emoji"></span>
+          </div>
+          <h3 class="feature-title">Non-Invasive Monitoring and ID</h3>
+          <p class="feature-description">
+            Monitor wildlife populations remotely using only photographs. Identify different individuals through just photographs.
+          </p>
+          <div class="feature-highlight">100% Photo-Based</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process-section">
+    <div class="process-container">
+      <div class="section-header fade-up">
+        <div class="section-badge">How It Works</div>
+        <h2 class="section-title">Simple Three-Step Process</h2>
+        <p class="section-subtitle">
+          Transform your wildlife research with our streamlined AI identification system.
+        </p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-step fade-up" data-delay="0">
+          <div class="step-number">1</div>
+          <div class="step-icon"></div>
+          <h3 class="step-title">Upload Images</h3>
+          <p class="step-description">
+            Upload pre-existing photos or new field images of big cats to our tool.
+          </p>
+          <div class="step-arrow">→</div>
         </div>
+        
+        <div class="process-step fade-up" data-delay="100">
+          <div class="step-number">2</div>
+          <div class="step-icon"></div>
+          <h3 class="step-title">AI Analysis</h3>
+          <p class="step-description">
+            Our advanced AI analyzes unique patterns, markings, and facial features in real-time.
+          </p>
+          <div class="step-arrow">→</div>
+        </div>
+        
+        <div class="process-step fade-up" data-delay="200">
+          <div class="step-number">3</div>
+          <div class="step-icon"></div>
+          <h3 class="step-title">Cross-Check</h3>
+          <p class="step-description">
+            Receive identification details of the animal, and cross-reference against known images to ensure accuracy.
+          <div class="step-arrow">→</div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container">
+      <div class="cta-content fade-up">
+        <h2 class="cta-title">Learn More</h2>
+        <p class="cta-subtitle">
+          Learn more through a case study and our about us.
+        </p>
+        <div class="cta-buttons">
+          <a href="our-work.html" class="btn btn-primary btn-large">
+            <span>Our Work/Case Study</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="about.html" class="btn btn-secondary btn-large">
+            <span>Learn About Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon"></span>
+            WildlifeID
+          </div>
+          <p class="footer-description">
+            Revolutionizing wildlife identification through AI-powered individual identification technology.
+          </p>
+          <div class="footer-stats">
+            <span>10+ Cats Identified</span>
+            <span>90%+ Accuracy</span>
+            <span>1 Partner Organization</span>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="our-work.html">Our Work</a>
+            <a href="about.html">About</a>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <a href="mailto:dhruvcds@outlook.com">dhruvcds@outlook.com</a>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 WildlifeID | Built for Conservation Impact</p>
+        <div class="footer-badges">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+</html>
