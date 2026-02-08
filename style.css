@@ -87,7 +87,7 @@ p {
       var(--acacia-gold) 35%,
       var(--dust-beige) 100%
     ),
-    url("assets/hero-bg.jpg");
+    url("hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -533,4 +533,5 @@ p {
     .nav-links {
         display: none;
     }
+
 }
