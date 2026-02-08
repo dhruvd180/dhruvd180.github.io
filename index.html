@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildlifeLens - AI-Powered Individual Wildlife Identification</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">WildlifeLens</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#challenge">Challenge</a></li>
+                <li><a href="#system">System</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#impact">Impact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>WildlifeLens</h1>
+            <p class="hero-tagline">AI-Powered Individual Big Cat Identification</p>
+            <p class="hero-description">
+                WildlifeLens is a computer vision system built to identify individual animals.
+            </p>
+        </div>
+        <div class="scroll-hint white">
+            <span>Scroll to Explore</span>
+            <div class="section-arrow"></div>
+        </div>
+    </section>
+
+    <section id="challenge" class="section">
+        <div class="container">
+            <h2>The Challenge</h2>
+            <div class="content-flow">
+                <p>Individual big cat identification requires visual discrimination with extreme variation in pose, lighting, visibility, and background.</p>
+                <p>Traditional tagging and manual photo matching do not scale well, and result in extreme time consumption for conservation biologists identifying individual animals.</p>
+                <p>WildlifeLens's approach uses deep learning to identify individual animals from photographs alone, enabling non-invasive, scalable individual identification and population monitoring.</p>
+                <p>The main technical challenge is variation in how the same animal appears across images and the visual similarity between different individuals. These issues are intensified by real-world field conditions such as camouflage, low lighting, and blurry images.</p>
+                <p>Traditional computer vision approaches struggle with the subtle distinctions required, particularly when dealing with naturally camouflaged species or poor lighting conditions in field settings.</p>
+                <p>WildlifeLens's deep metric learning approach allows the system to learn and cluster images of the same individual together while separating different individuals.</p>
+            </div>
+        </div><br><br>
+        <div class="scroll-hint orange">
+            <span>Scroll to Explore</span>
+            <div class="section-arrow"></div>
+        </div>
+    </section>
+
+    <!-- System Overview -->
+    <section id="system" class="section section-gray">
+        <div class="container">
+            <h2>System Overview</h2>
+            <p class="section-intro">End-to-end pipeline for big cat identification</p>
+            
+            <div class="pipeline-flow">
+                <div class="flow-step">
+                    <div class="step-number">01</div>
+                    <h3>Image Input</h3>
+                    <p>Field photography provides raw image data from natural habitats. Images are collected continuously across diverse environmental conditions, times of day, and seasons to build a comprehensive dataset.</p>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">02</div>
+                    <h3>Feature Extraction</h3>
+                    <p>Attention mechanisms identify and weight visual features. The network focuses on relevant patterns such as spot configurations, stripe patterns, and distinctive markings while ignoring background noise.</p>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">03</div>
+                    <h3>Embedding Generation</h3>
+                    <p>Metric learning maps images to a vector space optimized for identity separation. Images of the same animal form unique clusters of points in this embedding space, with distances reflecting visual similarity.</p>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="step-number">04</div>
+                    <h3>Matching & Ranking</h3>
+                    <p>Cosine similarity algorithm returns ranked matches from the database for biologists to cross-reference against existing data. When a new image is processed, the system computes its embedding vector and retrieves the most similar known individuals, enabling rapid identification.</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint orange">
+            <span>Scroll to Explore</span>
+            <div class="section-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Architecture -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <h2>Model Architecture</h2>
+            <p class="section-intro">
+                The WildlifeLens model is built on a convolutional backbone augmented with attention modules 
+                to emphasize relevant regions for ID. A dual-branch architecture captures both global 
+                morphology and localized spot pattern features.
+            </p>
+
+            <div class="architecture-details">
+                <div class="arch-component">
+                    <h3>Backbone CNN</h3>
+                    <p>Optimized for recognition with deep residual connections. Multi-scale features capture patterns at different spatial resolutions, from broad characteristics to small textural details.</p>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Attention Modules</h3>
+                    <p>Channel and spatial attention mechanisms dynamically weight distinct features. This allows the model to focus on biologically relevant regions like spot patterns, tail stripes, and body markings that are consistent across different viewing angles and conditions.</p>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Feature Fusion</h3>
+                    <p>Global and local feature integration provides comprehensive identity representation. Combines whole-body morphology with tiny pattern details to create robust embeddings that are robust to pose and lighting while remaining discriminative between individuals.</p>
+                </div>
+
+                <div class="arch-component">
+                    <h3>Embedding Space</h3>
+                    <p>Low-dimensional embedding optimized for identity separation. Designed for efficient retrieval and scalability to large databases. The embedding space is structured such that images of the same individual cluster tightly together while maintaining clear separation between different individuals.</p>
+                </div>
+            </div>
+            <div class="learning-objective">
+                <h3>Hard Triplet Loss</h3>
+                <P>WildlifeLens is trained using hard triplet loss, a metric learning objective designed to maximize identity separation in embedding space. Training samples are organized into triplets consisting of an anchor image, a positive image of the same individual, and a negative image of a different individual.</P>
+                <p>For each anchor image, the model computes the squared Euclidean distance between its embedding and the embeddings of the hardest positive and hardest negative samples within the batch. The hardest positive is the sample of the same individual that is farthest from the anchor, while the hardest negative is the sample of a different individual that is closest to the anchor.</p>
+                <div class="objective-details">       
+                        <div class="formula-display">
+                            <div class="formula-title">Hard Triplet Loss — Step 1: Distances</div>
+                            <code>
+                                d<sub>ap</sub> = ║f(A) - f(P<sub>hard</sub>)║<sup>2</sup><br>
+                                d<sub>an</sub> = ║f(A) - f(N<sub>hard</sub>)║<sup>2</sup>
+                            </code>
+                            <p class="formula-note">
+                                Compute the squared Euclidean distance for the hardest positive and hardest negative,
+                                where <em>f</em> is the embedding function, A is the anchor, P<sub>hard</sub> is the hardest positive, and N<sub>hard</sub> is the hardest negative.
+                            </p>
+                        </div>
+                <p></p>
+                <p>The triplet loss is calculated by comparing these distances and enforcing a margin between them. The loss penalizes cases where the hardest negative is not sufficiently farther from the anchor than the hardest positive, encouraging the model to separate identities by at least a margin α in embedding space.</p>
+                <div class="formula-display">
+                    <div class="formula-title">Hard Triplet Loss — Step 2: Loss per Triplet</div>
+                    <code>
+                    L<sub>i</sub> = max(d<sub>ap</sub> - d<sub>an</sub> + α, 0)
+                    </code>
+                    <p class="formula-note">Encourage the anchor to be closer to the positive than the negative by at least margin α, where L<sub>i</sub> is the loss for anchor i, d<sub>ap</sub> is the anchor–positive distance, d<sub>an</sub> is the anchor–negative distance, α is the margin, and max(dₐₚ − dₐₙ + α, 0) ensures non-negative loss.</p>
+                </div>
+                <p></p>
+                <p>The total hard triplet loss is obtained by summing the individual triplet losses across all anchors in the batch. This batch-level aggregation ensures that training emphasizes the most difficult identity distinctions, leading to more compact intra-individual clusters and stronger inter-individual separation.</p>
+                <div class="formula-display">
+                    <div class="formula-title">Hard Triplet Loss — Step 3: Total Loss</div>
+                    <code>
+                    L<sub>hard</sub> = Σ<sub>i=1</sub><sup>m</sup> L<sub>i</sub>
+                    </code>
+                    <p class="formula-note">Sum over all triplets in the batch, where L<sub>hard</sub> is the total hard triplet loss, L<sub>i</sub> is the loss for anchor i, and m is the number of anchors in the batch.</p>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <br><br><br>
+        <div class="scroll-hint orange">
+            <span>Scroll to Explore</span>
+            <div class="section-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Evaluation -->
+    <section class="section section-gray">
+        <div class="container">
+            <h2>Evaluation & Performance</h2>
+            
+            <div class="eval-content">
+                <h3>Quantitative Metrics</h3>
+                <p>WildlifeLens evaluates embedding quality using train/validation/test splits and cross-referencing against a reference database. Pairwise similarity, precision-recall curves, confusion matrices, and intra-/inter-individual distance analysis measure how well the model separates and clusters individual animals.</p>
+                
+                <p>Models are retrained with additional data when performance thresholds are not met, reducing misidentifications and improving overall accuracy.</p>
+                
+                <h3>Qualitative Analysis</h3>
+                <p>Biologists verify matches and inspect failure cases to ensure predictions align with conservation expectations. Attention maps highlight which animal regions the model relies on, guiding interpretability, debugging, and targeted retraining, while ranked individual output also offers another method of cross-referencing.</p>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="scroll-hint orange">
+            <span>Scroll to Explore</span>
+            <div class="section-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Impact -->
+    <section id="impact" class="section">
+        <div class="container">
+            <h2>Conservation Impact</h2>
+            
+            <div class="impact-content">
+                <div class="impact-item">
+                    <h3>Non-Invasive Identification</h3>
+                    <p>WildlifeLens enables identification of individual animals without physical contact, tagging, or sedation. This reduces stress on animals, eliminates handling, and lowers costs. Identification is performed from photographs taken at a distance, preserving natural behaviors and not infrining on animals.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h3>Improved Monitoring</h3>
+                    <p>Reliable identification across multiple sightings allows accurate analysis by conservationists of populations, movement patterns, survival rates, breeding success, and social structures. Long-term monitoring is possible without the limitations of tag failure or death associated with physical marking.</p>
+                </div>
+                
+                <div class="impact-item">
+                    <h3>Reduced Tagging Reliance</h3>
+                    <p>Photo-based identification minimizes the need for invasive tags, cutting costs and complexity. Standard phone or cameras and laptops are sufficient for ID, enabling broader geographic monitoring and reducing dependency on external support and specialized tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 WildlifeLens</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
