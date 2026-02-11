@@ -87,7 +87,7 @@ p {
       var(--acacia-gold) 35%,
       var(--dust-beige) 100%
     ),
-    url("hero-bg.jpg");
+    url("assets/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -533,5 +533,67 @@ p {
     .nav-links {
         display: none;
     }
+}
+/* Video Grid Styles */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
 
+.video-card {
+    background: var(--savanna-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-caption {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-style: italic;
+    text-align: center;
+    border-top: 1px solid var(--light-gray);
+}
+
+/* Mobile Responsive adjustment for Video Grid */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.list {
+  padding-left: 20px;
+  position: relative;
+}
+
+.list::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgb(35, 35, 35);
 }
