@@ -1,6 +1,4 @@
-// Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scroll for nav links
     const navLinks = document.querySelectorAll('.nav-links a');
     
     navLinks.forEach(link => {
@@ -20,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Intersection Observer for fade-in animations
+
     const observerOptions = {
         threshold: 0.15,
         rootMargin: '0px 0px -80px 0px'
@@ -34,14 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Add fade-in class to sections and observe them
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
         section.classList.add('fade-in');
         observer.observe(section);
     });
 
-    // Active nav link highlighting
     const highlightNavOnScroll = () => {
         const sections = document.querySelectorAll('.section[id], .hero[id]');
         const navLinks = document.querySelectorAll('.nav-links a');
