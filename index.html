@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WildlifeLens - AI-Powered Individual Wildlife Identification</title>
+    <title>Wildlife Lens - AI-Powered Individual Wildlife Identification</title>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
     </style>
@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">WildlifeLens</div>
+            <div class="nav-brand">Wildlife Lens</div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#challenge">Challenges</a></li>
@@ -26,10 +26,10 @@
     <section class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>WildlifeLens</h1>
+            <h1>Wildlife Lens</h1>
             <p class="hero-tagline">AI-powered identification of endangered animals</p>
             <p class="hero-description">
-                WildlifeLens is a computer vision system built to identify individual animals.
+                Wildlife Lens is a computer vision system built to identify individual animals.
             </p>
         </div>
         <div class="scroll-hint white">
@@ -49,10 +49,10 @@
                 <h3>Technical Challenge Details</h3>
                 <p>Individual big cat identification requires visual discrimination with extreme variation in pose, lighting, visibility, and background.</p>
                 <p>Traditional tagging and manual photo matching do not scale well, and result in extreme time consumption for conservation biologists identifying individual animals.</p>
-                <p>WildlifeLens's approach uses deep learning to identify individual animals from photographs alone, enabling non-invasive, scalable individual identification and population monitoring.</p>
+                <p>Wildlife Lens's approach uses deep learning to identify individual animals from photographs alone, enabling non-invasive, scalable individual identification and population monitoring.</p>
                 <p>The main technical challenge is variation in how the same animal appears across images and the visual similarity between different individuals. These issues are intensified by real-world field conditions such as camouflage, low lighting, and blurry images.</p>
                 <p>Traditional computer vision approaches struggle with the subtle distinctions required, particularly when dealing with naturally camouflaged species or poor lighting conditions in field settings.</p>
-                <p>WildlifeLens's deep metric learning approach allows the system to learn and cluster images of the same individual together while separating different individuals.</p>
+                <p>Wildlife Lens's deep metric learning approach allows the system to learn and cluster images of the same individual together while separating different individuals.</p>
             </div>
         </div><br><br>
         <div class="scroll-hint orange">
@@ -104,7 +104,7 @@
         <div class="container">
             <h2>Model Architecture</h2>
             <p class="section-intro">
-                The WildlifeLens model is built on a convolutional backbone augmented with attention modules 
+                The Wildlife Lens model is built on a convolutional backbone augmented with attention modules 
                 to emphasize relevant regions for ID. A dual-branch architecture captures both global 
                 morphology and localized spot pattern features.
             </p>
@@ -132,7 +132,7 @@
             </div>
             <div class="learning-objective">
                 <h3>Hard Triplet Loss</h3>
-                <P>WildlifeLens is trained using hard triplet loss, a metric learning objective designed to maximize identity separation in embedding space. Training samples are organized into triplets consisting of an anchor image, a positive image of the same individual, and a negative image of a different individual.</P>
+                <P>Wildlife Lens is trained using hard triplet loss, a metric learning objective designed to maximize identity separation in embedding space. Training samples are organized into triplets consisting of an anchor image, a positive image of the same individual, and a negative image of a different individual.</P>
                 <p>For each anchor image, the model computes the squared Euclidean distance between its embedding and the embeddings of the hardest positive and hardest negative samples within the batch. The hardest positive is the sample of the same individual that is farthest from the anchor, while the hardest negative is the sample of a different individual that is closest to the anchor.</p>
                 <div class="objective-details">       
                         <div class="formula-display">
@@ -181,7 +181,7 @@
             
             <div class="eval-content">
                 <h3>Quantitative Metrics</h3>
-                <p>WildlifeLens evaluates embedding quality using train/validation/test splits and cross-referencing against a reference database. Pairwise similarity, precision-recall curves, confusion matrices, and intra-/inter-individual distance analysis measure how well the model separates and clusters individual animals.</p>
+                <p>Wildlife Lens evaluates embedding quality using train/validation/test splits and cross-referencing against a reference database. Pairwise similarity, precision-recall curves, confusion matrices, and intra-/inter-individual distance analysis measure how well the model separates and clusters individual animals.</p>
                 
                 <p>The model is retrained with additional data when performance thresholds are not met, reducing misidentifications and improving overall accuracy.</p>
                 
@@ -198,13 +198,13 @@
         <section id="demo" class="section">
         <div class="container">
             <h2>Demonstration</h2>
-            <p class="section-intro">Observing WildlifeLens in action and the species it protects.</p>
+            <p class="section-intro">Observing Wildlife Lens in action and the species it protects.</p>
             <div class="video-grid">
                 <div class="video-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/ZdGKm8aqNkI?si=7TJ-2sgkkkY44s6V" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <p class="video-caption">Demonstration of WildlifeLens in action.</p>
+                    <p class="video-caption">Demonstration of Wildlife Lens in action.</p>
                 </div>
                 <div class="video-card">
                     <div class="video-container">
@@ -234,7 +234,7 @@
             <div class="impact-content">
                 <div class="impact-item">
                     <h3>Non-Invasive Identification</h3>
-                    <p>WildlifeLens enables identification of individual animals without physical contact, tagging, or sedation. This reduces stress on animals, eliminates handling, and lowers costs. Identification is performed from photographs taken at a distance, preserving natural behaviors and not infrining on animals.</p>
+                    <p>Wildlife Lens enables identification of individual animals without physical contact, tagging, or sedation. This reduces stress on animals, eliminates handling, and lowers costs. Identification is performed from photographs taken at a distance, preserving natural behaviors and not infrining on animals.</p>
                 </div>
                 
                 <div class="impact-item">
@@ -253,10 +253,11 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 WildlifeLens</p>
+            <p>&copy; 2025 Wildlife Lens</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
