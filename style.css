@@ -597,4 +597,33 @@ p {
   left: 0;
   color: rgb(35, 35, 35);
 }
+.quote-block {
+  background: #f8f0e6;
+  color: var(--midnight-black);
+  padding: 30px;
+  border-radius: 6px;
+  margin: 40px 0;
+  max-width: 900px;
+  border-left: 4px solid var(--safari-orange);
+}
 
+.quote-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 0 16px 0;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  font-weight: 600;
+}
